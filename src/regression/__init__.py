@@ -1,0 +1,7 @@
+"""
+回归任务模块
+
+包含各种回归算法的实现。
+所有回归算法必须继承 BaseRegressor 基类。
+"""
+from .base import BaseRegressor
