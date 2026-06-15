@@ -7,7 +7,7 @@ __pycache__/
 *.so
 
 # datasets
-SH-house-dataset.csv
+data/clustering/SH-house-dataset.csv
 
 # Distribution / packaging
 .Python
