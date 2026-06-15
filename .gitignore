@@ -43,6 +43,7 @@ htmlcov/
 .coverage
 .coverage.*
 .cache
+federated-finding-whale.md
 nosetests.xml
 coverage.xml
 *.cover
