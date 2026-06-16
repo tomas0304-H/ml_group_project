@@ -6,7 +6,8 @@ __pycache__/
 # C extensions
 *.so
 
-# datasets
+# datasets / logs
+changelog/
 data/clustering/SH-house-dataset.csv
 
 # Distribution / packaging
