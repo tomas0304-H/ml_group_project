@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# datasets
+data/clustering/SH-house-dataset.csv
+
 # Distribution / packaging
 .Python
 build/
@@ -43,6 +46,7 @@ htmlcov/
 .coverage
 .coverage.*
 .cache
+federated-finding-whale.md
 nosetests.xml
 coverage.xml
 *.cover
