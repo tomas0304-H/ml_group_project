@@ -9,6 +9,7 @@ __pycache__/
 # datasets / logs
 changelog/
 data/clustering/SH-house-dataset.csv
+data/regression/SeoulBikeData.csv
 
 # Distribution / packaging
 .Python
@@ -41,6 +42,7 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
+main_regression.py
 htmlcov/
 .tox/
 .nox/

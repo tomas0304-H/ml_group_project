@@ -1,0 +1,22 @@
+{
+  "model_name": "RandomForest",
+  "train_time": 0.2131669521331787,
+  "train_samples": 6772,
+  "n_estimators": 200,
+  "max_depth": 15,
+  "feature_importances": {
+    "Hour": 0.2804334869782713,
+    "Temperature(C)": 0.21962228697524094,
+    "Humidity(%)": 0.1005781076302729,
+    "Seasons_Winter": 0.09177715592482033,
+    "Dew point temperature(C)": 0.08415387560127423,
+    "Solar Radiation (MJ/m2)": 0.08203987638862861,
+    "Rainfall(mm)": 0.04159171848937509,
+    "Visibility (10m)": 0.03870233966450951,
+    "Wind speed (m/s)": 0.029692671231861513,
+    "Seasons_Summer": 0.016706628997158426,
+    "Seasons_Spring": 0.00977780664135758,
+    "Holiday_No Holiday": 0.002624444487795489,
+    "Snowfall (cm)": 0.0022996009894340076
+  }
+}

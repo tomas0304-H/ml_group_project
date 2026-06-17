@@ -20,6 +20,8 @@ DEFAULT_COLUMN_MAPPING = {
 DEFAULT_FEATURES = ['total_price', 'square_meters']
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DEFAULT_CSV = os.path.join(PROJECT_ROOT, "data", "clustering", "SH-house-dataset.csv")
+DEFAULT_MODEL_DIR = os.path.join(PROJECT_ROOT, "models", "clustering")
+DEFAULT_OUTPUT_DIR = os.path.join(PROJECT_ROOT, "results", "clustering")
 
 
 # ========== 核心函数 ==========
@@ -401,14 +403,16 @@ if __name__ == "__main__":
 
     # 6. 保存模型
     print("\n6. 保存模型与标准化器...")
-    output_dir = os.path.join(PROJECT_ROOT, "results", "clustering")
-    os.makedirs(output_dir, exist_ok=True)
-    joblib.dump(train_result['model'], os.path.join(output_dir, f"kmeans_{TARGET_CITY}_k{best_k}.pkl"))
-    joblib.dump(train_result['scaler'], os.path.join(output_dir, f"scaler_{TARGET_CITY}.pkl"))
-    print(f"模型已保存至：{output_dir}/")
+    model_dir = DEFAULT_MODEL_DIR
+    os.makedirs(model_dir, exist_ok=True)
+    joblib.dump(train_result['model'], os.path.join(model_dir, f"kmeans_{TARGET_CITY}_k{best_k}.pkl"))
+    joblib.dump(train_result['scaler'], os.path.join(model_dir, f"scaler_{TARGET_CITY}.pkl"))
+    print(f"模型已保存至：{model_dir}/")
 
     # 7. 结果输出
     print("\n7. 生成结果报表与可视化...")
+    output_dir = DEFAULT_OUTPUT_DIR
+    os.makedirs(output_dir, exist_ok=True)
     df_test_output = train_result['df_test'].copy()
     df_test_output['Cluster_Label'] = train_result['test_labels']
     csv_path = os.path.join(output_dir, f"{TARGET_CITY}_test_results_k{best_k}.csv")

@@ -5,3 +5,16 @@
 所有回归算法必须继承 BaseRegressor 基类。
 """
 from .base import BaseRegressor
+from .linear import LinearRegressor
+from .random_forest import (
+    RandomForestRegressor,
+    load_data,
+    preprocess,
+    train_model,
+    plot_feature_importance,
+    plot_prediction_vs_actual,
+    plot_residuals,
+    DEFAULT_CSV,
+    DEFAULT_OUTPUT_DIR,
+    DEFAULT_MODEL_DIR,
+)
