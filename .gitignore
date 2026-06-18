@@ -10,6 +10,7 @@ __pycache__/
 changelog/
 data/clustering/SH-house-dataset.csv
 data/regression/SeoulBikeData.csv
+data/classification/ADMET.xlsx
 
 # Distribution / packaging
 .Python
